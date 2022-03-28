@@ -1,0 +1,38 @@
+# Increase the header size as token can be quite bit.
+server:
+  max-http-header-size: 4MB
+
+# Persistence
+spring:
+  server:
+    error:
+      whithelabel:
+        enabled: false
+  jpa:
+    database: postgresql
+    show-sql: false
+    generate-ddl: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+#  flyway:
+#    enabled: true
+#    locations: classpath:db/migration/common
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://localhost:5432/user-service-db-local"
+    username: user-service
+    password: secret
+    hikari:
+      maximum-pool-size: 10
+      pool-name: "hikari-cp-${spring.application.name}"
+  data:
+    jpa:
+      repositories:
+        bootstrap_mode: default

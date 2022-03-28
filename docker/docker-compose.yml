@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+  # Database
+  user-service-db-local:
+    image: bitnami/postgresql
+    container_name: user-service-db-local
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user-service
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=user-service-db-local
