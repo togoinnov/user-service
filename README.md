@@ -8,7 +8,7 @@ User management service
 
 
 ### Docker
-* [Docker](https://www.docker.com/get-docker
+* [Docker](https://www.docker.com/get-docker)
 
 ## Starting the service
 ### Starting the postgres database docker image
