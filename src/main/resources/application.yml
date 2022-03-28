@@ -1,3 +1,4 @@
+
 # Increase the header size as token can be quite bit.
 server:
   max-http-header-size: 4MB
@@ -36,3 +37,6 @@ spring:
     jpa:
       repositories:
         bootstrap_mode: default
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
