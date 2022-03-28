@@ -3,7 +3,7 @@ User management service
 
 ## Prerequisites
 ### Local
-* [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Java 18 SDK](http://www.oracle.com/java/technologies/downloads/)
 * [Maven](https://maven.apache.org/download.cgi)
 
 
