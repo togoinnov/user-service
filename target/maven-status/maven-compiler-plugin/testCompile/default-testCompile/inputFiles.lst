@@ -1,1 +1,4 @@
+/home/bernard/development/togoinov/user-service/src/test/java/com/togoinov/user/domain/repository/UserRepositoryTest.java
+/home/bernard/development/togoinov/user-service/src/test/java/com/togoinov/user/DefaultTestDataUtils.java
 /home/bernard/development/togoinov/user-service/src/test/java/com/togoinov/user/UserServiceApplicationTests.java
+/home/bernard/development/togoinov/user-service/src/test/java/com/togoinov/user/service/mapper/UserDtoMapperTest.java

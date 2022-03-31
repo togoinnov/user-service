@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: "jdbc:h2:mem:testdb"
+  jpa:
+    open-in-view: false
+  flyway:
+    locations: classpath:db/migration/common
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

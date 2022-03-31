@@ -1,1 +1,4 @@
+com/togoinov/user/DefaultTestDataUtils.class
+com/togoinov/user/service/mapper/UserDtoMapperTest.class
 com/togoinov/user/UserServiceApplicationTests.class
+com/togoinov/user/domain/repository/UserRepositoryTest.class
