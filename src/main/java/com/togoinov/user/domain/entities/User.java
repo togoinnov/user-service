@@ -1,6 +1,19 @@
 package com.togoinov.user.domain.entities;
 
 
+import com.togoinov.user.api.Sex;
+import lombok.*;
+import org.apache.tomcat.jni.Address;
+import org.hibernate.Hibernate;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
+
 @ToString(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor

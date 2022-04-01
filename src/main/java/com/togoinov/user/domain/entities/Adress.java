@@ -1,5 +1,16 @@
 package com.togoinov.user.domain.entities;
 
+import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Version;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
 @ToString(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
