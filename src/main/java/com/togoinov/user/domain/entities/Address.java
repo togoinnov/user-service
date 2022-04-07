@@ -19,7 +19,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "address")
 
-public class Adress {
+public class Address {
 
     @Id
     private UUID id;
