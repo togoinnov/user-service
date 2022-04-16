@@ -1,2 +1,13 @@
-com/togoinov/user/UserServiceApplication.class
-com/togoinov/user/web/OpenApiConfig.class
+com\togoinov\user\domain\api\AddressDto.class
+com\togoinov\user\service\mapper\UserDtoMapper.class
+com\togoinov\user\domain\entities\User.class
+com\togoinov\user\service\mapper\AddressDtoMapper.class
+com\togoinov\user\api\Sex.class
+com\togoinov\user\domain\api\AddressDto$AddressDtoBuilder.class
+com\togoinov\user\domain\api\UserDto.class
+com\togoinov\user\UserServiceApplication.class
+com\togoinov\user\domain\entities\User$UserBuilder.class
+com\togoinov\user\web\OpenApiConfig.class
+com\togoinov\user\domain\entities\Address$AddressBuilder.class
+com\togoinov\user\domain\api\UserDto$UserDtoBuilder.class
+com\togoinov\user\domain\entities\Address.class
