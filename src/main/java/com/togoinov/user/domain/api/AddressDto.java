@@ -49,5 +49,5 @@ public class AddressDto {
     )
     @NonNull
     @NotNull
-    String Land;
+    String land;
 }

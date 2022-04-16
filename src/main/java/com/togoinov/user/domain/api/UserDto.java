@@ -6,6 +6,7 @@ import lombok.*;
 import org.springframework.lang.Nullable;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -43,7 +44,7 @@ public class UserDto {
     )
     @NonNull
     @NotNull
-    String dob;
+    LocalDateTime dob;
 
     @Schema(
             example = "ab@cd.com"
