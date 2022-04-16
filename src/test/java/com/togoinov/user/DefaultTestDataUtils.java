@@ -24,6 +24,18 @@ public class DefaultTestDataUtils {
                 .build();
     }
 
+    public static User createAnotherUser(){
+        return User.builder()
+                .id(UUID.randomUUID())
+                .firstname("Jean")
+                .lastname("KOLIKO")
+                .dob(ZonedDateTime.of(1985, 10, 22, 9, 00, 0, 0, ZoneOffset.UTC).toLocalDateTime())
+                .email("jean.koliko@mail.com")
+                .sex(Sex.MALE)
+                .avatar("avatar")
+                .build();
+    }
+
     public static UserDto createUserDto(){
         return UserDto.builder()
                 .id(UUID.randomUUID())
