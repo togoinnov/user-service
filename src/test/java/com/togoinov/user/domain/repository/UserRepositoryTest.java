@@ -1,6 +1,7 @@
 package com.togoinov.user.domain.repository;
 
 import com.togoinov.user.DefaultTestDataUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ public class UserRepositoryTest {
 
     @Test
     void when_find_by_id_then_return() {
+        // Prepare
         final var address = DefaultTestDataUtils.createAddress();
 
          final var userAddress = this.addressRepository.save(address);
@@ -32,6 +34,11 @@ public class UserRepositoryTest {
         final var user = DefaultTestDataUtils.createUser();
         user.setAddresses(List.of(address));
 
+        // Act
         this.userRepository.save(user);
+
+        // Assert
+        final var users = List.of(userRepository.findAll());
+        Assertions.assertEquals(1, users.size());
     }
 }

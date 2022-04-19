@@ -46,9 +46,9 @@ public class User {
             fetch = FetchType.LAZY
     )
     @Singular(ignoreNullCollections = true)
-//    @Valid
-//    @JoinColumn(name = "user_id", referencedColumnName = "id")
-//    @Nullable
+    @Valid
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @Nullable
     private List<Address> addresses;
     private String createdBy;
     @CreatedDate
