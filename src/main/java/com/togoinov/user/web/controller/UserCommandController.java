@@ -16,7 +16,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-
 import java.net.URI;
 import java.util.UUID;
 
@@ -70,6 +69,7 @@ public class UserCommandController {
                 "API: Deleting User",
                 StructuredArgs.id(id)
         );
+        userCommandService.delete(id);
     }
 
     @Operation()

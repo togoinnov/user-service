@@ -27,10 +27,10 @@ public class UserRepositoryTest {
     void when_find_by_id_then_return() {
         final var address = DefaultTestDataUtils.createAddress();
 
-        final var userAddress = this.addressRepository.save(address);
+         final var userAddress = this.addressRepository.save(address);
 
         final var user = DefaultTestDataUtils.createUser();
-        user.setAddresses(List.of(userAddress));
+        user.setAddresses(List.of(address));
 
         this.userRepository.save(user);
     }

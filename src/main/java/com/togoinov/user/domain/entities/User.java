@@ -5,8 +5,10 @@ import lombok.*;
 import org.hibernate.Hibernate;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
@@ -22,6 +24,7 @@ import java.util.UUID;
 public class User {
 
     @Id
+    @GeneratedValue
     private UUID id;
     private String firstname;
     private String lastname;
@@ -37,9 +40,15 @@ public class User {
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE,
-                    CascadeType.REFRESH
-            }
+                    CascadeType.REMOVE
+            },
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
     )
+    @Singular(ignoreNullCollections = true)
+//    @Valid
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+//    @Nullable
     private List<Address> addresses;
     private String createdBy;
     @CreatedDate

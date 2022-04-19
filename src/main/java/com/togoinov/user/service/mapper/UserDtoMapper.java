@@ -6,6 +6,7 @@ import lombok.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class UserDtoMapper {
@@ -41,7 +42,7 @@ public class UserDtoMapper {
 
     public static @NonNull User mapUserDto(@NonNull final UserDto userDto) {
         return User.builder()
-                .id(userDto.getId())
+                .id(userDto.getId() == null ? UUID.randomUUID(): userDto.getId())
                 .firstname(userDto.getFirstname())
                 .lastname(userDto.getLastname())
                 .dob(userDto.getDob())

@@ -3,8 +3,10 @@ package com.togoinov.user.service;
 import com.togoinov.user.api.UserDto;
 import com.togoinov.user.api.service.UserCommandService;
 import com.togoinov.user.common.StructuredArgs;
+import com.togoinov.user.domain.repository.AddressRepository;
 import com.togoinov.user.domain.repository.UserRepository;
 import com.togoinov.user.service.exception.ResourceNotFoundException;
+import com.togoinov.user.service.mapper.AddressDtoMapper;
 import com.togoinov.user.service.mapper.UserDtoMapper;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +25,9 @@ public class DefaultUserCommandService implements UserCommandService {
     @NonNull
     private final UserRepository userRepository;
 
+    @NonNull
+    private final AddressRepository addressRepository;
+
     @Override
     public @NonNull UserDto create(@NonNull UserDto userDto) {
         if (userDto.getId() != null) {
@@ -31,6 +36,7 @@ public class DefaultUserCommandService implements UserCommandService {
                     "User already exists",
                     StructuredArgs.userDto(userDto)
             );
+            return userDto;
         }
         userDto.toBuilder().id(UUID.randomUUID());
         log.info(
@@ -38,7 +44,12 @@ public class DefaultUserCommandService implements UserCommandService {
                 "Creating a new User",
                 StructuredArgs.userDto(userDto)
         );
+        final var addresses = userDto.getAddressDtos() != null ? AddressDtoMapper.mapDtos(userDto.getAddressDtos()) : null;
+        if (addresses != null) {
+            this.addressRepository.saveAll(addresses);
+        }
          final var newUser = UserDtoMapper.mapUserDto(userDto);
+//
          final var savedUser = this.userRepository.save(newUser);
 
         return UserDtoMapper.mapUserEntity(savedUser);

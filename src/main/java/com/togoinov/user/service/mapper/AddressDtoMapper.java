@@ -5,6 +5,7 @@ import com.togoinov.user.domain.entities.Address;
 import lombok.NonNull;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class AddressDtoMapper {
@@ -38,7 +39,7 @@ public class AddressDtoMapper {
 
     public static @NonNull Address mapDto(@NonNull final AddressDto addressDto) {
         return Address.builder()
-                .id(addressDto.getId())
+                .id(addressDto.getId() == null ? UUID.randomUUID(): addressDto.getId())
                 .street(addressDto.getStreet())
                 .houseNumber(addressDto.getHouseNumber())
                 .zipCode(addressDto.getZipCode())
