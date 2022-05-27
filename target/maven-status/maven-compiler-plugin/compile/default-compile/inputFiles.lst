@@ -1,2 +1,9 @@
-/home/bernard/development/togoinov/user-service/src/main/java/com/togoinov/user/UserServiceApplication.java
-/home/bernard/development/togoinov/user-service/src/main/java/com/togoinov/user/web/OpenApiConfig.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\api\Sex.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\domain\api\AddressDto.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\domain\entities\Address.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\service\mapper\UserDtoMapper.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\domain\entities\User.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\domain\api\UserDto.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\web\OpenApiConfig.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\service\mapper\AddressDtoMapper.java
+C:\Users\marca\IdeaProjects\user-service\src\main\java\com\togoinov\user\UserServiceApplication.java

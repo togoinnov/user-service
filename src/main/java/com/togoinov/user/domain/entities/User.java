@@ -3,7 +3,6 @@ package com.togoinov.user.domain.entities;
 
 import com.togoinov.user.api.Sex;
 import lombok.*;
-import org.apache.tomcat.jni.Address;
 import org.hibernate.Hibernate;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
