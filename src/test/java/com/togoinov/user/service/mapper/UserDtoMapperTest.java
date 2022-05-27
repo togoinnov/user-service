@@ -28,6 +28,8 @@ public class UserDtoMapperTest {
         assertNotEquals(userDto1.getFirstname(), userDto2.getFirstname());
         assertEquals("KOLIKO", userDto2.getLastname());
         // assertEquals(userDto1.getAddressDtos(), userDto2.getAddressDtos());
+
+        // Ajout d'un nouveau test
     }
 
     @Test
